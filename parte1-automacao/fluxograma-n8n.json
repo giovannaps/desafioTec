@@ -1,0 +1,151 @@
+{
+  "name": "Fluxograma - desafioTec",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/usuario-novo/c5eb4dd2-8247-44b0-b3a1-14929d12a2e8",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -784,
+        -112
+      ],
+      "id": "e1f089ff-072b-4b56-8fed-76371e12603c",
+      "name": "Webhook",
+      "webhookId": "c5eb4dd2-8247-44b0-b3a1-14929d12a2e8"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -400,
+        -112
+      ],
+      "id": "cbb3cf07-a44e-4f1a-99d5-db6d10d63034",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "content": "## Envia os dados do User criado no Discourse para o Webhook\n",
+        "height": 112,
+        "width": 214,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -832,
+        -240
+      ],
+      "id": "e6cb3995-b283-4a1e-b7be-f28efaf027f5",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Código em JavaScript para identificar o domínio do email.",
+        "height": 112,
+        "width": 214,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -464,
+        -240
+      ],
+      "typeVersion": 1,
+      "id": "376334a1-981e-4688-a0af-262143a54c3f",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "resource": "boardItem",
+        "boardId": "=abc\n",
+        "groupId": "=123",
+        "name": "=teste",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.mondayCom",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -112
+      ],
+      "id": "c62f8237-3e44-40fa-b2b6-c9a72cfb6744",
+      "name": "Create an item in a board's group"
+    },
+    {
+      "parameters": {
+        "content": "## User criado e enviado para o board do Monday.",
+        "height": 112,
+        "width": 214,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -64,
+        -240
+      ],
+      "typeVersion": 1,
+      "id": "c8ccaad5-d8c9-48b4-96f0-f2c60599444f",
+      "name": "Sticky Note2"
+    }
+  ],
+  "pinData": {
+    "Create an item in a board's group": [
+      {
+        "json": {
+          "name": "First item",
+          "code": 1
+        }
+      },
+      {
+        "json": {
+          "name": "Second item",
+          "code": 2
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Create an item in a board's group",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "dc38d996-7a6c-4f75-a98c-44fba714fadd",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "98b405324186fed94c9fa008b1c17537935f004b866fed0037cd118f726c751e"
+  },
+  "nodeGroups": [],
+  "id": "iGilpJOfTPxNAhqw",
+  "tags": []
+}
