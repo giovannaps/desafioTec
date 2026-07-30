@@ -18,7 +18,9 @@
       "webhookId": "c5eb4dd2-8247-44b0-b3a1-14929d12a2e8"
     },
     {
-      "parameters": {},
+      "parameters": {
+        "jsCode": "function welcome(user) {\n    if (user.email.includes(\"@empresa.com\")) {\n        user.welcome_message = (\"Bem-vindo(a) ao time, @\" + user.username + \"!\");\n    }\n    else {\n        user.welcome_message = (\"Seja muito bem-vindo(a) à nossa comunidade, @\" + user.username + \"!\");\n    }\n    return user;\n}\n\nfor (const item of $input.all()) {\n  welcome(item.json);\n}\n\nreturn $input.all();"
+      },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
@@ -140,7 +142,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "dc38d996-7a6c-4f75-a98c-44fba714fadd",
+  "versionId": "326ca129-e70b-4a51-b3aa-f12c57d3fc88",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "98b405324186fed94c9fa008b1c17537935f004b866fed0037cd118f726c751e"
