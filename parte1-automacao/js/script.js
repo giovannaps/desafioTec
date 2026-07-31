@@ -20,4 +20,3 @@ function welcome(user) {
 welcome(User);
 console.log(welcome(User).welcome_message);
 document.getElementById('username').textContent = User.username
-document.getElementById('welcome_message').textContent = User.welcome_message
