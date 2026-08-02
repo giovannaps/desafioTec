@@ -31,11 +31,12 @@ O time de Marketing/Comunidades necessitava de uma solução para automatizar a 
 │   │   └── style.css            # Estilização e responsividade do banner
 │   └── index.html               # Estrutura principal do banner HTML
 └── README.md                    # Documentação completa do projeto
+```
 
 ## Resultados
 
 ### Parte 1 - Automação e Fluxo no n8n
-O n8n é uma ferramenta de automação de fluxos de trabalho de código aberto e low-code. A estrutura do projeto baseia-se em 3 nós principais: Webhook, JavaScript e Monday.com. 
+O n8n é uma ferramenta de automação de fluxos de trabalho de código aberto e low-code. A estrutura do projeto baseia-se em 3 nós principais: Webhook, JavaScript e Monday.com.
 
 O nó Webhook funciona como uma "ponte digital", recebendo os dados do novo usuário criado no Discourse no formato JSON. Em seguida, o nó Code (JavaScript) aplica a regra de negócio para disparar mensagens de saudação personalizadas de acordo com o domínio do e-mail. Por fim, esses dados são enviados ao Monday.com e inseridos diretamente no quadro/planilha da equipe.
 
@@ -58,5 +59,3 @@ A automação criada no n8n foi desenvolvida para eliminar a necessidade de regi
 Com o n8n, estabelecemos uma "ponte digital" que conecta os dois sistemas, garantindo que qualquer pessoa cadastrada no fórum seja transferida de forma 100% automática para a planilha de acompanhamento.
 
 Além da integração, o fluxo identifica o perfil de cada membro e gera saudações personalizadas. Caso o time de Marketing queira alterar o texto das mensagens no futuro, o processo é bem simples: basta acessar o nó de código (JavaScript) dentro do fluxo no n8n e substituir a mensagem pelo texto desejado.
-
-
