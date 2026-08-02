@@ -17,6 +17,6 @@ function welcome(user) {
     return user;
 }
 
-welcome(User);
-console.log(welcome(User).welcome_message);
+const message = welcome(User);
+console.log(message.welcome_message);
 
