@@ -40,6 +40,10 @@ O n8n é uma ferramenta de automação de fluxos de trabalho de código aberto e
 
 O nó Webhook funciona como uma "ponte digital", recebendo os dados do novo usuário criado no Discourse no formato JSON. Em seguida, o nó Code (JavaScript) aplica a regra de negócio para disparar mensagens de saudação personalizadas de acordo com o domínio do e-mail. Por fim, esses dados são enviados ao Monday.com e inseridos diretamente no quadro/planilha da equipe.
 
+### Fluxo do Workflow
+
+![Fluxograma do workflow no n8n](parte1-automacao/workflow/fluxograma.png)
+
 O uso do Postman foi essencial para testar e validar a requisição do Webhook, garantindo o retorno da resposta com status `200 OK` (sucesso).
 
 ![Teste do Webhook no Postman](./parte1-automacao/workflow/postman-teste.png)
