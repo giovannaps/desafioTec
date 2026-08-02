@@ -38,11 +38,13 @@ O time de Marketing/Comunidades necessitava de uma solução para automatizar a 
 ### Parte 1 - Automação e Fluxo no n8n
 O n8n é uma ferramenta de automação de fluxos de trabalho de código aberto e low-code. A estrutura do projeto baseia-se em 3 nós principais: Webhook, JavaScript e Monday.com.
 
-O nó Webhook funciona como uma "ponte digital", recebendo os dados do novo usuário criado no Discourse no formato JSON. Em seguida, o nó Code (JavaScript) aplica a regra de negócio para disparar mensagens de saudação personalizadas de acordo com o domínio do e-mail. Por fim, esses dados são enviados ao Monday.com e inseridos diretamente no quadro/planilha da equipe.
+O nó Webhook funciona como uma "ponte", recebendo os dados do novo usuário criado no Discourse no formato JSON. Em seguida, o nó Code (JavaScript) aplica a regra de negócio para disparar mensagens de saudação personalizadas de acordo com o domínio do e-mail. Por fim, esses dados são enviados ao Monday.com e inseridos diretamente no quadro/planilha da equipe.
 
 ### Fluxo do Workflow
 
 ![Fluxograma do workflow no n8n](parte1-automacao/workflow/fluxograma.png)
+
+*Foram colocados dados imaginários no Monday apenas para teste do fluxograma.* 
 
 O uso do Postman foi essencial para testar e validar a requisição do Webhook, garantindo o retorno da resposta com status `200 OK` (sucesso).
 
