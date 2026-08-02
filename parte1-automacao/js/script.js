@@ -1,6 +1,6 @@
 //Simulação de um nó code do n8n 
 
-var User = {
+const User = {
     id: 1042,
     username: "dev_candidate",
     email: "candidato@email.com",
@@ -19,4 +19,4 @@ function welcome(user) {
 
 welcome(User);
 console.log(welcome(User).welcome_message);
-document.getElementById('username').textContent = User.username
+
